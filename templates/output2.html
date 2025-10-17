@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        background-image: url("/static/images/phishing_email_label_background.jpg");
+        background-size: cover; /* Changed from contain to cover */
+        background-repeat: no-repeat;
+        background-position: center;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .msg {
+        height: 30%;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+
+      button {
+        height: 3rem;
+        width: 8rem;
+        background-color: red;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .close-btn {
+        position: absolute;
+        bottom: -9rem;
+      }
+
+      .diet-btn {
+        position: absolute;
+        bottom: 20rem;
+        right: -20rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="msg">
+      <h1>{{val}}</h1>
+      <a href="/" class="close-btn"> <button>Close</button></a>
+      <a href="/feedback_form" class="diet-btn"> <button>FeedBack </button></a>
+    </div>
+  </body>
+</html>

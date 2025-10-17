@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPhish Guard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100%;
+      background-image: url("/static/images/phishingemail_background.webp");
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 4.2rem;
+      color: green;
+    }
+    .main {
+      width: 50%;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="text"], input[type="number"] {
+      height: 2.7rem;
+      width: 80%;
+      margin-bottom: 1rem;
+      outline: none;
+      font-size: 1.1rem;
+      text-align: center;
+      border: none;
+      border-radius: 4px;
+    }
+    .btn {
+      width: 8rem;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      color: white;
+      background-color: red;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h1>AutoPhish Guard</h1>
+    <form action="/loading" method="POST">
+      <input type="text" name="sender" placeholder="Enter Sender Email Address" required />
+      <input type="text" name="receiver" placeholder="Enter Receiver Email Address" required />
+      <input type="text" name="subject" placeholder="Enter Subject(if subject is not available Enter No Subject)" required />
+      <input type="text" name="body" placeholder="Enter Body" required />
+      <input type="number" name="url_count" placeholder="URLs Count" required />
+      <input type="submit" class="btn" value="Submit" />
+    </form>
+  </div>
+</body>
+</html>
